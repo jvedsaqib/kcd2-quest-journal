@@ -1,74 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
+
 <title>KCD2 Quest Journal</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 
+<link rel="icon" href="data:,">
+
 <style>
+
 body{
-font-family:"MedievalSharp",serif;
+font-family:"MedievalSharp", serif;
 }
+
 </style>
 
 </head>
 
-<body class="bg-amber-50 dark:bg-gray-900 min-h-screen">
+<body class="bg-[#f4ecd8] text-gray-900 dark:bg-[#1e293b] dark:text-gray-200 min-h-screen">
 
-<header class="sticky top-0 bg-amber-800 text-amber-100 p-4 shadow-lg z-10">
-<div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+<!-- HEADER -->
 
-<h1 class="text-2xl md:text-3xl font-bold">
+<header class="sticky top-0 bg-[#5a2e0f] dark:bg-[#0f172a] text-[#f5e6c8] p-4 shadow-lg z-10">
+
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+<h1 class="text-2xl md:text-3xl font-bold tracking-wide">
 ⚔ KCD2 Quest Journal
 </h1>
 
-<div class="flex flex-wrap gap-2">
+<div class="flex flex-wrap gap-2 items-center">
 
-<input id="search"
-class="px-3 py-1 rounded text-black"
-placeholder="Search quest"/>
+<input
+id="search"
+placeholder="Search quest"
+class="px-3 py-1 rounded bg-[#f5e6c8] text-gray-900 border border-[#8b5e34]"
+/>
 
-<select id="regionFilter" class="px-2 py-1 rounded text-black">
+<select
+id="regionFilter"
+class="px-2 py-1 rounded bg-[#f5e6c8] text-gray-900 border border-[#8b5e34]"
+>
 <option value="all">All Regions</option>
 </select>
 
-<select id="filter" class="px-2 py-1 rounded text-black">
+<select
+id="filter"
+class="px-2 py-1 rounded bg-[#f5e6c8] text-gray-900 border border-[#8b5e34]"
+>
 <option value="all">All</option>
 <option value="missable">Missable</option>
 <option value="trophy">Trophy</option>
 </select>
 
-<button id="darkToggle"
-class="bg-gray-700 px-2 py-1 rounded">
+<button
+id="darkToggle"
+class="bg-gray-800 text-white px-3 py-1 rounded hover:bg-gray-700"
+>
 🌙
 </button>
 
-<button id="reset"
-class="bg-red-700 px-2 py-1 rounded">
+<button
+id="reset"
+class="bg-red-700 text-white px-3 py-1 rounded hover:bg-red-600"
+>
 Reset
 </button>
 
 </div>
+
 </div>
 
-<div class="max-w-6xl mx-auto mt-3">
-<div class="w-full bg-gray-300 h-3 rounded">
-<div id="progressBar" class="bg-green-600 h-3 rounded w-0"></div>
+<!-- PROGRESS -->
+
+<div class="max-w-6xl mx-auto mt-4">
+
+<div class="w-full bg-[#e7d3a3] dark:bg-gray-700 h-3 rounded overflow-hidden">
+
+<div
+id="progressBar"
+class="bg-[#8b5e34] h-3 w-0 transition-all duration-300"
+></div>
+
 </div>
 
 <p id="progressText" class="text-sm mt-1"></p>
+
 </div>
 
 </header>
 
-<main id="quests"
-class="max-w-6xl mx-auto p-4 grid gap-6">
+<!-- QUEST LIST -->
+
+<main
+id="quests"
+class="max-w-6xl mx-auto p-4 grid gap-6"
+>
+
+<!-- quests inserted here by app.js -->
+
 </main>
+
+<!-- SCRIPT -->
 
 <script src="app.js"></script>
 
 </body>
+
 </html>
